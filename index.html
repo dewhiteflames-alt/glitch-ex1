@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet" />
   <link rel="icon" type="image/jpeg" href="assets/IMG-20260219-WA0025.jpg" />
   <link rel="apple-touch-icon" href="assets/IMG-20260219-WA0025.jpg" />
@@ -20,94 +20,162 @@
 <body>
 
   <!-- =================== NAVBAR =================== -->
-  <!-- Logo left | Links center | Sun icon right -->
+  <!-- Brand logo & name left | Navigation links center | Magnetic Hire CTA right -->
   <!-- =================== NAVBAR =================== -->
   <header class="nav" id="nav">
-    <nav class="nav__menu">
+    <div class="nav__brand mag-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="nav__logo-svg">
+        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+        <polyline points="2 17 12 22 22 17"></polyline>
+        <polyline points="2 12 12 17 22 12"></polyline>
+      </svg>
+      <span class="nav__logo-text">glitch-EX</span>
+    </div>
+
+    <nav class="nav__menu-wrap">
       <a href="#home" class="nav__item active">Home</a>
-      <a href="#projects" class="nav__item">Projects</a>
-      <img src="assets/IMG-20260219-WA0025.jpg" alt="mini" class="nav__mini-img">
       <a href="#about" class="nav__item">About</a>
+      <a href="#skills" class="nav__item">Skills</a>
+      <a href="#projects" class="nav__item">Projects</a>
       <a href="#contact" class="nav__item">Contact</a>
     </nav>
+
+    <div class="nav__action">
+      <a href="#contact" class="nav__btn mag-btn">HIRE ME &rarr;</a>
+    </div>
   </header>
 
   <main>
 
     <!-- =================== HERO =================== -->
     <section id="home" class="hero">
-      <div class="wrap hero__wrap">
-
-        <div class="hero__content">
-          <h1 class="hero__title">
-            Fullstack Web & Mobile Developer &<br>
-            <span class="hero__title-serif">UI/UX Designer</span>
+      <div class="hero__inner reveal">
+        <!-- Left: Text -->
+        <div class="hero__left">
+          <p class="hero__eyebrow">&#8212; AVAILABLE FOR WORK</p>
+          <p class="hero__name-prefix">I'M</p>
+          <h1 class="hero__name">
+            <span class="hero__name-solid">GLITCH-EX</span>
+            <span class="hero__name-stroke">DEVELOPER<span class="dot-solid">.</span></span>
           </h1>
-          <p class="hero__desc">
-            Hey there! I am glitch-EX, a fullstack developer with a focus on frontend development. I design and build
-            web applications that not only look good but are easy to use.
-          </p>
+          <div class="hero__desc-wrap">
+            <p class="hero__desc">Fullstack Web &amp; Mobile Developer &amp; UI/UX Designer. I build clean, responsive,
+              and user-friendly digital experiences that look great and work smoothly.</p>
+            <!-- Floating Badge shifted next to description -->
+            <div class="hero__badge">
+              <div class="hero__badge-wrap">
+                <svg class="hero__badge-svg" viewBox="0 0 100 100" fill="none">
+                  <path id="badge-path" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
+                  <text fill="var(--blue)" font-size="9.2" letter-spacing="3.2" font-family="Space Mono, monospace">
+                    <textPath href="#badge-path">DEVELOPER · DESIGNER · CREATOR ·</textPath>
+                  </text>
+                </svg>
+                <div class="hero__badge-star">✦</div>
+              </div>
+            </div>
+          </div>
           <div class="hero__btns">
-            <a href="assets/Blessed_CV.pdf" target="_blank" class="btn btn--hero">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-              Resume
-            </a>
+            <a href="#projects" class="btn btn--hero-dark mag-btn">View Portfolio &rarr;</a>
+            <a href="#contact" class="btn btn--hero-outline-dark mag-btn">Hire Me</a>
+          </div>
+          <!-- Scroll Down Indicator -->
+          <div class="hero__scroll reveal">
+            <div class="hero__scroll-mouse">
+              <div class="hero__scroll-dot"></div>
+            </div>
+            <span class="hero__scroll-text">Scroll Down</span>
+          </div>
+        </div>
+        <!-- Right: Photo -->
+        <div class="hero__right">
+          <div class="hero__photo-wrap">
+            <img src="assets/IMG-20260219-WA0025.jpg" alt="Glitch-EX" class="hero__photo">
+          </div>
+          <!-- Stats -->
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-target="10" data-suffix="+" data-delay="100">0+</span>
+              <span class="hero__stat-label">Projects</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-target="2" data-suffix="" data-delay="300">0</span>
+              <span class="hero__stat-label">Yrs Exp</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-target="5" data-suffix="+" data-delay="500">0+</span>
+              <span class="hero__stat-label">Services</span>
+            </div>
           </div>
         </div>
       </div>
+
     </section>
+
+    <!-- =================== MARQUEE BANNER =================== -->
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <span>FULLSTACK ENGINEERING &bull; UI/UX DESIGN &bull; MOBILE SOLUTIONS &bull; BLOCKCHAIN &bull; DECENTRALIZED
+          PROTOCOLS &bull;&nbsp;</span>
+        <span>FULLSTACK ENGINEERING &bull; UI/UX DESIGN &bull; MOBILE SOLUTIONS &bull; BLOCKCHAIN &bull; DECENTRALIZED
+          PROTOCOLS &bull;&nbsp;</span>
+        <span>FULLSTACK ENGINEERING &bull; UI/UX DESIGN &bull; MOBILE SOLUTIONS &bull; BLOCKCHAIN &bull; DECENTRALIZED
+          PROTOCOLS &bull;&nbsp;</span>
+        <span>FULLSTACK ENGINEERING &bull; UI/UX DESIGN &bull; MOBILE SOLUTIONS &bull; BLOCKCHAIN &bull; DECENTRALIZED
+          PROTOCOLS &bull;&nbsp;</span>
+      </div>
+    </div>
 
     <!-- =================== MY STACK =================== -->
     <section class="stack-section">
       <div class="wrap">
-        <h2 class="stack-bar__title">My Stack</h2>
-        <div class="stack-grid">
-          <div class="stack-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+        <h2 class="stack-bar__title reveal">My <span class="text-stroke">Stack</span></h2>
+        <div class="stack-grid reveal">
+          <div class="stack-item tilt-card"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
               alt="HTML"><span>HTML</span></div>
-          <div class="stack-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-              alt="CSS"><span>CSS</span></div>
-          <div class="stack-item"><img
+          <div class="stack-item tilt-card"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"><span>CSS</span>
+          </div>
+          <div class="stack-item tilt-card"><img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
               alt="JavaScript"><span>JavaScript</span></div>
-          <div class="stack-item"><img
+          <div class="stack-item tilt-card"><img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
               alt="TypeScript"><span>TypeScript</span></div>
-          <div class="stack-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+          <div class="stack-item tilt-card"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
               alt="React"><span>React.JS</span></div>
-          <div class="stack-item"><img
+          <div class="stack-item tilt-card"><img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
               alt="Node.js"><span>Node.JS</span></div>
-          <div class="stack-item"><img
+          <div class="stack-item tilt-card"><img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
               alt="Express"><span>Express.JS</span></div>
-          <div class="stack-item"><img
+          <div class="stack-item tilt-card"><img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
               alt="MongoDB"><span>MongoDB</span></div>
-          <div class="stack-item"><img
+          <div class="stack-item tilt-card"><img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
               alt="Next.js"><span>Next.JS</span></div>
-          <div class="stack-item"><img
+          <div class="stack-item tilt-card"><img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
               alt="Kotlin"><span>Kotlin</span></div>
-          <div class="stack-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+          <div class="stack-item tilt-card"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
               alt="React Native"><span>React Native</span></div>
-          <div class="stack-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+          <div class="stack-item tilt-card"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
               alt="Figma"><span>Figma</span></div>
-          <div class="stack-item"><img src="https://dl.svgcdn.com/svg/logos/expo.svg" alt="Expo"><span>Expo</span></div>
-          <div class="stack-item"><img
+          <div class="stack-item tilt-card"><img src="https://dl.svgcdn.com/svg/logos/expo.svg"
+              alt="Expo"><span>Expo</span></div>
+          <div class="stack-item tilt-card"><img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg"
               alt="Prisma"><span>Prisma</span></div>
-          <div class="stack-item"><img
+          <div class="stack-item tilt-card"><img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
               alt="SQLite"><span>SQLite</span></div>
-          <div class="stack-item"><img
+          <div class="stack-item tilt-card"><img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
               alt="Supabase"><span>Supabase</span></div>
         </div>
@@ -118,38 +186,161 @@
     <!-- =================== ABOUT =================== -->
     <section id="about" class="about-section">
       <div class="wrap">
-        <div class="about-grid">
+        <div class="about-grid reveal">
+          <!-- Left: Text -->
           <div class="about-text">
-            <h2 class="about-title">About Me</h2>
-            <div class="about-bio">
-              <p style="color: #1a1a1a; font-weight: 600;">Hey there 🚀</p>
-              <p style="color: #1a1a1a; font-weight: 700; font-size: 1.2rem;">
-                Full-Stack Web & Mobile Developer | UI Designer
-              </p>
-              <p style="color: #1a1a1a;">
-                I don't just build apps; I engineer digital ecosystems. My focus is on high-performance infrastructure,
-                seamless user experiences, and the intersection of AI and real-world utility.
-              </p>
-              <h3 style="color: #1a1a1a; font-weight: 800; margin-top: 1rem; font-size: 1.3rem;">Core Competencies</h3>
-              <ul
-                style="color: #1a1a1a; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.8rem;">
-                <li><strong>Full-Stack Engineering:</strong> Architecture-first development using Next.js, Node.js, and
-                  TypeScript to build scalable, production-ready web applications.</li>
-                <li><strong>Mobile Solutions:</strong> Crafting native-feel mobile experiences and automated utility
-                  systems, including WhatsApp-integrated payment bots.</li>
-                <li><strong>UI/UX Design:</strong> Implementing advanced design patterns like glassmorphism and
-                  high-contrast typography to ensure interfaces are as intuitive as they are aesthetic.</li>
-                <li><strong>Next-Gen Tech:</strong> Actively deploying decentralized protocols on Solana and Sui, and
-                  integrating LLMs for autonomous system optimization.</li>
-              </ul>
+            <p class="about-eyebrow">&#8212; About Me</p>
+            <h2 class="about-title">GLITCH-EX</h2>
+            <p class="about-desc">
+              I'm a Fullstack Web & Mobile Developer based in <strong>Nigeria</strong>.
+              I specialize in creating clean, responsive, and user-friendly digital experiences
+              that help brands stand out and grow online.
+            </p>
+            <p class="about-desc">
+              With a strong blend of design and engineering, I build everything from
+              corporate websites to decentralized Web3 applications — every pixel crafted with intention.
+            </p>
+            <!-- Social Links -->
+            <div class="about-socials">
+              <a href="https://twitter.com/Glitch8x" target="_blank" class="about-social-link">𝕏 Twitter</a>
+              <a href="https://www.linkedin.com/in/osikokhai-azemobo-1843603a6" target="_blank"
+                class="about-social-link">in LinkedIn</a>
+              <a href="https://github.com/Glitch8x" target="_blank" class="about-social-link">⌥ GitHub</a>
+              <a href="mailto:glitchex00@gmail.com" class="about-social-link">✉ Email</a>
             </div>
           </div>
+          <!-- Right: Photo -->
           <div class="about-visual">
-            <div class="profile-frame">
-              <img src="assets/IMG-20260219-WA0025.jpg" alt="Emmanuel Nsikan-David" class="profile-frame__img">
-              <p class="profile-frame__caption">Glitch-Ex</p>
+            <div class="about-photo-wrap tilt-card">
+              <img src="assets/IMG-20260219-WA0025.jpg" alt="Glitch-EX" class="about-photo">
+              <div class="about-location-badge">NIGERIA NG</div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== SKILLS =================== -->
+    <section id="skills" class="skills-section">
+      <div class="wrap">
+        <p class="skills-eyebrow reveal">&#8212; What I Do</p>
+        <h2 class="skills-title reveal">MY SKILLS<br><span class="skills-title-stroke">&amp; EXPERTISE</span></h2>
+        <div class="skills-grid reveal">
+
+          <!-- 1 -->
+          <div class="skill-service-card tilt-card">
+            <div class="skill-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+            </div>
+            <h3 class="skill-service-title">Web Development</h3>
+            <p class="skill-service-desc">I build clean, responsive, and performant websites using modern frameworks
+              like React and TypeScript — from landing pages to full-stack web apps.</p>
+          </div>
+
+          <!-- 2 -->
+          <div class="skill-service-card tilt-card">
+            <div class="skill-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10" />
+                <path
+                  d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" />
+              </svg>
+            </div>
+            <h3 class="skill-service-title">Graphic Design</h3>
+            <p class="skill-service-desc">I create captivating visuals, social media graphics, and digital assets that
+              communicate your message clearly and professionally.</p>
+          </div>
+
+          <!-- 3 -->
+          <div class="skill-service-card tilt-card">
+            <div class="skill-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.8">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </div>
+            <h3 class="skill-service-title">Brand Identity Design</h3>
+            <p class="skill-service-desc">I build complete brand systems — logo, color palette, typography, and
+              guidelines to create a cohesive, recognizable identity.</p>
+          </div>
+
+          <!-- 4 -->
+          <div class="skill-service-card tilt-card">
+            <div class="skill-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18M9 21V9" />
+              </svg>
+            </div>
+            <h3 class="skill-service-title">UI/UX Design</h3>
+            <p class="skill-service-desc">I craft intuitive interfaces and user-centered designs that enhance engagement
+              and usability — using Figma for pixel-perfect layouts.</p>
+          </div>
+
+          <!-- 5 -->
+          <div class="skill-service-card tilt-card">
+            <div class="skill-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.8">
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <line x1="12" y1="18" x2="12.01" y2="18" stroke-linecap="round" stroke-width="2" />
+              </svg>
+            </div>
+            <h3 class="skill-service-title">Mobile App Development</h3>
+            <p class="skill-service-desc">I craft native-feel mobile experiences for iOS and Android using React Native
+              and Expo — performant, beautiful, and cross-platform.</p>
+          </div>
+
+          <!-- 6 -->
+          <div class="skill-service-card tilt-card">
+            <div class="skill-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.8">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+            </div>
+            <h3 class="skill-service-title">Blockchain Development</h3>
+            <p class="skill-service-desc">I build decentralized applications on Sui and Solana — smart contracts, NFT
+              systems, DeFi protocols, and Web3 integrations.</p>
+          </div>
+
+          <!-- 7 -->
+          <div class="skill-service-card tilt-card">
+            <div class="skill-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.8">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </div>
+            <h3 class="skill-service-title">SEO Optimization</h3>
+            <p class="skill-service-desc">I help improve search rankings, page speed, and visibility to drive organic
+              traffic using best practices and performance optimization.</p>
+          </div>
+
+          <!-- 8 -->
+          <div class="skill-service-card tilt-card">
+            <div class="skill-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="1.8">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <h3 class="skill-service-title">API Integration</h3>
+            <p class="skill-service-desc">I connect your app to third-party services — payment gateways, authentication
+              systems, real-time databases, and external APIs.</p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -178,7 +369,7 @@
               A fintech insurance platform built to modernize coverage with seamless onboarding, smart policy
               management, and AI-assisted claims processing to improve your insurance experience.
             </p>
-                        <div class="project-featured__btns">
+            <div class="project-featured__btns">
               <a href="https://github.com/Glitch8x" target="_blank" class="btn btn--source">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
                 Source Code
@@ -191,7 +382,7 @@
         <!-- Project 2 -->
         <article class="project-featured">
           <div class="project-featured__image-wrap">
-            <img src="assets/Screenshot (2758).png" alt="Zeno Store" class="project-featured__image">
+            <img src="assets/Screenshot (3820).png" alt="Zeno Store" class="project-featured__image">
           </div>
           <div class="project-featured__content">
             <h3 class="project-featured__title">Zeno Store</h3>
@@ -207,7 +398,7 @@
               A premium e-commerce platform for minimalist home decor — featuring conscious designs for personal spaces,
               seamless checkout, and an elegant shopping experience.
             </p>
-                        <div class="project-featured__btns">
+            <div class="project-featured__btns">
               <a href="https://github.com/Glitch8x" target="_blank" class="btn btn--source">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
                 Source Code
@@ -236,7 +427,7 @@
               A premium interior design platform providing luxury institutional and residential solutions, specializing
               in elegant spaces that blend comfort, style, and lasting value.
             </p>
-                        <div class="project-featured__btns">
+            <div class="project-featured__btns">
               <a href="https://github.com/Glitch8x" target="_blank" class="btn btn--source">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
                 Source Code
@@ -259,9 +450,9 @@
                   alt="React"><span>React.JS</span></div>
             </div>
             <p class="project-featured__desc">
-              A decentralized messaging platform enabling secure, on-chain communication and notifications.
+              A decentralized crowdsourced network monitoring system that captures real-time diagnostics from mobile devices, compiling metrics into high-utility heatmaps to identify dead zones or areas with superior network performance.
             </p>
-                        <div class="project-featured__btns">
+            <div class="project-featured__btns">
               <a href="https://github.com/Glitch8x" target="_blank" class="btn btn--source">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
                 Source Code
@@ -287,7 +478,7 @@
               A decentralized messaging platform on the Sui blockchain, enabling secure, on-chain communication and file
               sharing.
             </p>
-                        <div class="project-featured__btns">
+            <div class="project-featured__btns">
               <a href="https://github.com/Glitch8x" target="_blank" class="btn btn--source">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
                 Source Code
@@ -316,7 +507,7 @@
               An autonomous Web3 scout that monitors markets, captures alpha, and automatically executes trades to grow
               your portfolio.
             </p>
-                        <div class="project-featured__btns">
+            <div class="project-featured__btns">
               <a href="https://github.com/Glitch8x" target="_blank" class="btn btn--source">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
                 Source Code
@@ -345,7 +536,7 @@
               A comprehensive student result management portal for the Federal University of Technology Minna, featuring
               grade analytics, report cards, and dashboards.
             </p>
-                        <div class="project-featured__btns">
+            <div class="project-featured__btns">
               <a href="https://github.com/Glitch8x" target="_blank" class="btn btn--source">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
                 Source Code
@@ -373,7 +564,7 @@
               An AI-powered gas optimization agent that analyzes on-chain transactions and intelligently routes
               execution to minimize gas costs for dApps.
             </p>
-                        <div class="project-featured__btns">
+            <div class="project-featured__btns">
               <a href="https://github.com/Glitch8x" target="_blank" class="btn btn--source">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
                 Source Code
@@ -386,25 +577,24 @@
         <!-- Project 9 -->
         <article class="project-featured">
           <div class="project-featured__image-wrap">
-            <img src="assets/Screenshot (2761).png" alt="Axon Event Platform" class="project-featured__image">
+            <img src="assets/Screenshot (3821).png" alt="Verify-ID" class="project-featured__image">
           </div>
           <div class="project-featured__content">
-            <h3 class="project-featured__title">Axon Event Platform</h3>
+            <h3 class="project-featured__title">Verify-ID</h3>
             <div class="project-featured__tags">
               <div class="tag-pill"><img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                   alt="React"><span>React.JS</span></div>
             </div>
             <p class="project-featured__desc">
-              A decentralized event ticketing and discovery platform built on the Sui blockchain, enabling creators to
-              mint, manage and sell event passes as NFTs.
+              The first decentralized identity protocol built for the next 100M users. Secure, fast, and fully private.
             </p>
-                        <div class="project-featured__btns">
+            <div class="project-featured__btns">
               <a href="https://github.com/Glitch8x" target="_blank" class="btn btn--source">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
                 Source Code
               </a>
-              <a href="https://cortex-gas.onrender.com/" target="_blank" class="btn btn--live">Live Site</a>
+              <a href="https://verify-id-neon.vercel.app/" target="_blank" class="btn btn--live">Live Site</a>
             </div>
           </div>
         </article>
@@ -425,7 +615,7 @@
               A comprehensive university portal designed to streamline campus communication, featuring real-time news
               updates, academic schedules, and event management.
             </p>
-                        <div class="project-featured__btns">
+            <div class="project-featured__btns">
               <a href="https://github.com/Glitch8x" target="_blank" class="btn btn--source">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
                 Source Code
@@ -440,11 +630,12 @@
     <!-- =================== CONTACT =================== -->
     <section id="contact" class="section" style="background: var(--surface);">
       <div class="wrap center">
-        <h2 class="heading">Get in Touch</h2>
-        <p class="hero__desc" style="margin-bottom: 4rem;">Have a project in mind? Let's build something amazing
+        <h2 class="heading reveal">Get in <span class="text-stroke">Touch</span></h2>
+        <p class="hero__desc reveal" style="margin-bottom: 4rem;">Have a project in mind? Let's build something amazing
           together.</p>
 
-        <div class="contact-form-wrap" style="background: #fff; border: 1px solid var(--border); border-radius: 24px;">
+        <div class="contact-form-wrap reveal"
+          style="background: #fff; border: 1px solid var(--border); border-radius: 24px;">
           <form action="https://formspree.io/f/xwvybkrr" method="POST" class="contact-form">
             <div class="form-group">
               <input type="text" id="name" name="name" placeholder="Your Name" required style="border-radius: 8px;">
@@ -456,22 +647,22 @@
               <textarea id="message" name="message" rows="4" placeholder="Your Message" required
                 style="border-radius: 8px;"></textarea>
             </div>
-            <button type="submit" class="btn btn--live"
+            <button type="submit" class="btn btn--live mag-btn"
               style="width: 100%; justify-content: center; padding: 1rem;">Send Message</button>
           </form>
         </div>
 
-        <div class="contact-links" style="margin-top: 4rem;">
-          <a href="https://github.com/Glitch8x" target="_blank" class="stack-pill" style="padding: 1rem 2rem;">
+        <div class="contact-links reveal" style="margin-top: 4rem;">
+          <a href="https://github.com/Glitch8x" target="_blank" class="stack-pill mag-btn" style="padding: 1rem 2rem;">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
             <span>GitHub</span>
           </a>
-          <a href="https://www.linkedin.com/in/osikokhai-azemobo-1843603a6" target="_blank" class="stack-pill"
+          <a href="https://www.linkedin.com/in/osikokhai-azemobo-1843603a6" target="_blank" class="stack-pill mag-btn"
             style="padding: 1rem 2rem;">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
             <span>LinkedIn</span>
           </a>
-          <a href="mailto:glitchex00@gmail.com" class="stack-pill" style="padding: 1rem 2rem;">
+          <a href="mailto:glitchex00@gmail.com" class="stack-pill mag-btn" style="padding: 1rem 2rem;">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               style="color: var(--blue);">
@@ -480,9 +671,10 @@
             </svg>
             <span>Email</span>
           </a>
-          <a href="https://twitter.com/Glitch8x" target="_blank" class="stack-pill" style="padding: 1rem 2rem;">
+          <a href="https://twitter.com/Glitch8x" target="_blank" class="stack-pill mag-btn" style="padding: 1rem 2rem;">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
             </svg>
             <span>Twitter</span>
           </a>
@@ -492,8 +684,59 @@
 
   </main>
 
-  <footer class="footer">
-    <div class="wrap">© 2026 glitch-EX. All rights reserved.</div>
+  <footer class="footer-complex">
+    <div class="wrap footer-complex__grid">
+      <div class="footer-complex__brand">
+        <div class="footer-complex__logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <span class="footer-complex__logo-text">GLITCH-EX</span>
+        </div>
+        <p class="footer-complex__desc">
+          Crafting exceptional web and design experiences.
+        </p>
+        <div class="footer-complex__socials">
+          <a href="https://twitter.com/Glitch8x" target="_blank" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/osikokhai-azemobo-1843603a6" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://github.com/Glitch8x" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-complex__links">
+        <h4 class="footer-complex__title">QUICK LINKS</h4>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-complex__links">
+        <h4 class="footer-complex__title">SERVICES</h4>
+        <ul>
+          <li><a href="#skills">Web Development</a></li>
+          <li><a href="#skills">Graphic Design</a></li>
+          <li><a href="#skills">Brand Identity</a></li>
+          <li><a href="#skills">UI/UX Design</a></li>
+          <li><a href="#skills">Paid Advertisement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="footer-complex__bottom">
+        <div class="footer-complex__copy">&copy; 2026 GLITCH-EX. ALL RIGHTS RESERVED.</div>
+        <div class="footer-complex__location">OSIKOKHAI AZEMOBO &bull; KWARA, NIGERIA</div>
+      </div>
+    </div>
   </footer>
 
   <div class="modal" id="project-modal">
@@ -617,6 +860,10 @@
       if (modal) modal.classList.remove('active');
     };
   </script>
+
+  <!-- Custom Mouse Cursor Elements -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
 </body>
 
 </html>
