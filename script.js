@@ -44,6 +44,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const navItems = document.querySelectorAll('.nav__item');
   const sections = document.querySelectorAll('section[id]');
   
+  // Mobile menu toggle logic
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const navMenuWrap = document.querySelector('.nav__menu-wrap');
+
+  if (mobileMenuBtn && navMenuWrap) {
+    mobileMenuBtn.addEventListener('click', () => {
+      navMenuWrap.classList.toggle('mobile-active');
+    });
+
+    // Close mobile menu when clicking a link
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navMenuWrap.classList.remove('mobile-active');
+      });
+    });
+  }
+
   if (navItems.length && sections.length) {
     const navIO = new IntersectionObserver(entries => {
       entries.forEach(e => {
