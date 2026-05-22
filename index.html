@@ -17,7 +17,18 @@
   <script type="module" src="/script.js"></script>
 </head>
 
-<body>
+<body style="overflow: hidden;">
+  <!-- =================== PRELOADER =================== -->
+  <div id="preloader" class="preloader">
+    <div class="preloader__content">
+      <h2 class="preloader__brand">GLITCH-EX<span class="dot-solid">.</span></h2>
+      <div class="preloader__progress-container">
+        <div class="preloader__progress-bar" id="preloader-bar"></div>
+      </div>
+      <div class="preloader__percentage" id="preloader-text">0%</div>
+    </div>
+  </div>
+
   <div id="cursor"></div>
   <div id="cursor-ring"></div>
 

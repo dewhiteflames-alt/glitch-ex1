@@ -1,6 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // ===================================================
+  // PRELOADER ANIMATION
+  // ===================================================
+  const preloader = document.getElementById('preloader');
+  const preloaderBar = document.getElementById('preloader-bar');
+  const preloaderText = document.getElementById('preloader-text');
+
+  if (preloader && preloaderBar && preloaderText) {
+    let progress = 0;
+    // Simulate loading progress
+    const interval = setInterval(() => {
+      progress += Math.floor(Math.random() * 10) + 5;
+      if (progress > 100) progress = 100;
+      
+      preloaderBar.style.width = `${progress}%`;
+      preloaderText.textContent = `${progress}%`;
+      
+      if (progress === 100) {
+        clearInterval(interval);
+        setTimeout(() => {
+          preloader.classList.add('fade-out');
+          // Allow scrolling again, reverting to CSS rules
+          document.body.style.overflow = '';
+        }, 400); // short delay after hitting 100%
+      }
+    }, 60);
+  }
+
+  // ===================================================
   // NAVBAR SCROLL EFFECT
   // ===================================================
   const nav = document.querySelector('.nav');
